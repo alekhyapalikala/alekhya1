@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mtraditional</title>
+    <style>
+        .card{
+            height:350px;
+            width:250px;
+            display:inline-flex;
+    
+        }
+        .card img{
+            height:300px;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <input type="number" id="minvalue"/>
+    <input type="number" id="maxvalue"/>
+    <input type="button" class="submit" value="filter"/>
+    <a href="mens.html"><button class="btn btn-primary">Back To Home</button></a>
+
+</div>
+
+<div style="display:inline-flex;flex-wrap: wrap;">
+ <div class="card" data-value="1000" style="margin-top:30px;padding:10px">
+     <center><img src="https://i.pinimg.com/564x/ae/3d/d9/ae3dd96cb6a756209839fc08e3f8dc94.jpg"  /></center>
+     <center><p>1000</p></center>
+ </div>
+  <div class="card" data-value="2000" style="margin-top:30px;padding:10px">
+     <center><img src="https://i.pinimg.com/564x/2f/70/bd/2f70bdfe7ebfd3fbd88163519e1e7ef1.jpg"  /></center>
+     <center><p>2000</p></center>
+  </div>
+       
+    
+     
+  <div class="card" data-value="2500" style="margin-top:30px">
+        <center><img src="https://i.pinimg.com/564x/f8/e9/9e/f8e99e1076c622a9904937147e5ebf71.jpg" />
+        <center><p>2500</p></center>
+ </div>
+
+
+
+
+    
+ <div class="card" data-value="1000" style="margin-top:30px">
+    <center><img src="https://i.pinimg.com/564x/48/10/f8/4810f8b8838bc2e00c3732698700fe45.jpg" /></center>
+    <center><p>1000</p></center>
+ </div>
+
+        <div class="card" data-value="2000" style="margin-top:30px">
+            <center><img src="https://i.pinimg.com/564x/40/d1/07/40d107b26c61ad6fd742c061b0db8446.jpg" /></center>
+            <center><p>2000</p></center>
+        </div>
+
+    
+    
+        <div class="card" data-value="2500" style="margin-top:30px">
+            <center><img src="https://i.pinimg.com/564x/ac/50/3a/ac503a2863815a684c548bf43ad96b66.jpg"  />
+            <p>2500</p></center>
+      </div>
+
+
+    
+            <div class="card" data-value="1000" style="margin-top:30px">
+            <center><img src="https://i.pinimg.com/564x/c6/22/f4/c622f49841db9d2c38d089de2f3f3a4a.jpg"  /></center>
+             <center><p>1000</p></center>
+            </div>
+
+        
+        
+            <div class="card" data-value="2000" style="margin-top:30px">
+            <center><img src="https://i.pinimg.com/236x/f0/89/69/f08969e982402fc8997093087d63eecc.jpg"  /></center>
+             <center><p>2000</p></center>
+            </div>
+
+    
+    
+        <div class="card" data-value="2500" style="margin-top:30px">
+            <center><img src="https://i.pinimg.com/564x/9c/80/15/9c801539f06aecfd3881dda90503a4e6.jpg" />
+            <p>2500</p></center>
+        </div>
+
+
+    
+     <div class="card" data-value="1000" style="margin-top:30px">
+            <center><img src="https://i.pinimg.com/564x/44/e6/57/44e657fc6400439a7d696a691da2e82a.jpg" /></center>
+            <center><p>1000</p></center>
+     </div>
+
+        <div class="card" data-value="2000" style="margin-top:30px">
+            <center><img src="https://i.pinimg.com/564x/ec/d4/7c/ecd47c6ba250523b5243ec2133b133d3.jpg"  /></center>
+            <center><p class="box" data-value="2000">2000</p></center>
+     </div>
+
+    
+    
+        <div class="card" data-value="2500" style="margin-top:30px">
+        <center><img src="https://i.pinimg.com/564x/86/fe/fa/86fefafbaa29c7c28f54c6636bb82891.jpg"  />
+            <p class="box" data-value="2500">2500</p></center>
+        </div>
+
+
+</div>
+<script>
+subBtn=document.querySelector('.submit');
+let datavalue=document.querySelectorAll('.card');
+datavalue.forEach(function(Items){
+subBtn.addEventListener('click',function(){
+    let min=document.getElementById('minvalue').value;
+    let max=document.getElementById('maxvalue').value;
+    minPI=parseInt(min);
+    maxPI=parseInt(max);
+    //alert(min)
+    //alert(max)
+    let dataItems=Items.getAttribute('data-value');
+    //alert(dataItems)
+    if(dataItems>=minPI && dataItems<=maxPI){
+        Items.style.display="block";
+    }
+    else{
+        Items.style.display="none";
+    }
+
+})
+})
+
+</script>
+
+</body>
+</html
